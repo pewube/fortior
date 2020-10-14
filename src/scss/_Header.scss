@@ -1,0 +1,136 @@
+@import "variables";
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 98;
+  width: 100%;
+  height: $header-height;
+  padding: 0 10px;
+
+  background-color: #000;
+
+  transition: 0.3s linear;
+
+  &-container {
+    width: 100%;
+    height: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    transition: 0.2s linear;
+
+    &__img--sign {
+      width: 40px;
+      animation: logo 10s infinite linear;
+    }
+    &__img--name {
+      width: 110px;
+      padding-left: 10px;
+    }
+  }
+  &__burger {
+    width: $burger-size;
+    height: $burger-size;
+    overflow: hidden;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+
+    animation: burger-back 0.2s linear 1 both;
+
+    &__layer {
+      width: 100%;
+      height: 5px;
+      background-color: $fortior-red;
+
+      transition: 0.2s linear;
+
+      &--1 {
+        animation: burger-1-back 0.2s linear 0.8s 1 both;
+      }
+      &--2 {
+        animation: burger-2-back 0.2s linear 0.4s 1 both;
+      }
+      &--3 {
+        animation: burger-3-back 0.2s linear 0.8s 1 both;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--active {
+      animation: burger 0.2s linear 0.8s 1 both;
+
+      .header__burger__layer--1 {
+        animation: burger-1 0.2s linear 1 both;
+      }
+      .header__burger__layer--2 {
+        animation: burger-2 0.2s linear 0.4s 1 both;
+      }
+      .header__burger__layer--3 {
+        animation: burger-3 0.2s linear 1 both;
+      }
+    }
+  }
+
+  &--white {
+    background-color: #fff;
+  }
+
+  &--transparent {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  &--hide {
+    top: -$header-height;
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 1024px) {
+  .header {
+    &__logo {
+      &__img--sign {
+        width: 50px;
+      }
+      &__img--name {
+        width: 150px;
+        padding-left: 15px;
+      }
+    }
+    height: $header-height-1024;
+    &__burger {
+      width: $burger-size-1024;
+      height: $burger-size-1024;
+      &__layer {
+        height: 6px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1366px) {
+  .header {
+    &__logo:hover {
+      filter: brightness(1.5);
+    }
+
+    &__burger:hover {
+      .header__burger__layer {
+        filter: brightness(1.5);
+      }
+    }
+  }
+}

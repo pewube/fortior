@@ -1,0 +1,12 @@
+@import "variables";
+
+html {
+  font-family: "Oxygen", "Roboto", sans-serif;
+  font-size: $base-font-size;
+}
+
+@media (min-width: 768px) and (min-height: 768px) {
+  html {
+    font-size: $base-font-size-768;
+  }
+}

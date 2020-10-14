@@ -1,0 +1,233 @@
+.contact {
+  min-height: calc(100vh - (#{$base-font-size} * 0.6 * 2.4));
+  padding: $header-height 20px 20px 20px;
+
+  background-image: url(/assets/img/contact/bg-contact-d.jpg);
+  background-repeat: no-repeat;
+  background-position: 30% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+
+  color: #000;
+
+  &-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    transition: 0.5s linear;
+    &--hidden {
+      opacity: 0;
+    }
+  }
+
+  &__header {
+    &__title {
+      padding: 20px 0;
+      font-family: "Roboto", "Oxygen", sans-serif;
+      color: $fortior-red;
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-align: left;
+    }
+  }
+
+  &__data {
+    padding: 10px;
+    margin-bottom: 20px;
+    line-height: 140%;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+  }
+
+  &__par {
+    padding-bottom: 10px;
+    text-align: left;
+    hyphens: auto;
+
+    & span {
+      color: $medical;
+      font-weight: 700;
+    }
+  }
+}
+
+.form {
+  padding: 10px;
+  margin-bottom: 20px;
+
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+
+  font-family: "Roboto", "Oxygen", sans-serif;
+
+  &__title {
+    padding-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  &__input {
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    background-color: $input-background;
+
+    color: #000;
+    font-family: "Roboto", "Oxygen", sans-serif;
+    font-size: 1rem;
+
+    &::placeholder {
+      font-size: 0.9rem;
+      color: $placeholder-color;
+    }
+
+    &:focus {
+      font-weight: 400;
+      outline: none;
+      border: 2px solid $yellow-green;
+      background-color: #fff;
+    }
+
+    &-message {
+      height: 250px;
+      padding-top: 10px;
+      resize: none;
+      font-family: "Roboto", "Oxygen", sans-serif;
+    }
+
+    &-robo {
+      display: none;
+    }
+
+    &--invalid {
+      border: 2px solid $fortior-red;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+    background-color: $olive-drab-3;
+    border-radius: 5px;
+
+    font-family: "Roboto", "Oxygen", sans-serif;
+    font-size: 1rem;
+    line-height: 35px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &--busy {
+      pointer-events: none;
+      background-color: #fff;
+      border: 1px solid $olive-drab-3;
+      color: $olive-drab-3;
+    }
+
+    &:active {
+      color: $olive-drab-3;
+      font-size: 0.9rem;
+      background-color: #fff;
+      border-bottom: 1px solid $olive-drab-3;
+      opacity: 0.7;
+      letter-spacing: 0;
+    }
+  }
+
+  &__status-panel {
+    display: block;
+
+    font-family: "Oxygen", "Roboto", sans-serif;
+    color: $olive-drab-3;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 700;
+
+    &--invalid {
+      padding: 10px 0;
+      color: $fortior-red;
+      font-size: 0.9rem;
+      line-height: 150%;
+    }
+
+    &--error {
+      color: $fortior-red;
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 150%;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .contact {
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__header {
+      width: 100%;
+    }
+
+    &__data {
+      width: calc(50% - 10px);
+    }
+  }
+
+  .form {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (min-height: 768px) {
+  .contact {
+    min-height: calc(100vh - (#{$base-font-size-768} * 0.6 * 2.4));
+    &__header {
+      &__title {
+        padding: 40px 0;
+      }
+    }
+    &__data {
+      width: calc(50% - 20px);
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .form {
+    padding: 20px;
+
+    &__title {
+      padding-bottom: 30px;
+    }
+
+    &__input {
+      width: 100%;
+      height: 40px;
+      padding: 0 10px;
+      margin-bottom: 20px;
+
+      &-message {
+        height: 300px;
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 1024px) {
+  .contact {
+    padding: $header-height-1024 20px 20px 20px;
+  }
+}

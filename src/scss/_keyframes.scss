@@ -1,0 +1,198 @@
+// Loader
+
+@keyframes loader {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(-180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes loader-border {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Header logo
+
+@keyframes logo {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  30% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(-180deg);
+  }
+  70% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+//Burger
+
+@keyframes burger {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(315deg);
+  }
+}
+
+@keyframes burger-back {
+  0% {
+    transform: rotate(315deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes burger-1 {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(12px);
+  }
+}
+
+@keyframes burger-1-back {
+  0% {
+    transform: translateY(12px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 1024px) {
+  @keyframes burger-1 {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(13px);
+    }
+  }
+
+  @keyframes burger-1-back {
+    0% {
+      transform: translateY(13px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@keyframes burger-2 {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes burger-2-back {
+  0% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes burger-3 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  99% {
+    transform: translateY(-11px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-11px);
+    opacity: 0;
+  }
+}
+
+@keyframes burger-3-back {
+  0% {
+    transform: translateY(-12px);
+    opacity: 0;
+  }
+
+  1% {
+    transform: translateY(-12px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// how we do it
+
+@keyframes how-p {
+  0% {
+    left: 150vw;
+  }
+
+  2% {
+    left: 50%;
+  }
+  18% {
+    left: 50%;
+  }
+  20% {
+    left: -150vw;
+  }
+  100% {
+    left: -150vw;
+  }
+}
+
+@keyframes how-svg {
+  0% {
+    left: -150vw;
+  }
+
+  2% {
+    left: 50%;
+  }
+  18% {
+    left: 50%;
+  }
+  20% {
+    left: 150vw;
+  }
+  100% {
+    left: 150vw;
+  }
+}
