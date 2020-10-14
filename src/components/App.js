@@ -68,9 +68,8 @@ class App extends Component {
 
     window.addEventListener("scroll", () => {
       if (
-        window.innerWidth < 768 &&
-        window.innerHeight < 768 &&
-        !this.state.navigation
+        (!this.state.navigation && window.innerWidth < 768) ||
+        (!this.state.navigation && window.innerHeight < 768)
       ) {
         this.handleHeaderHide();
       }
